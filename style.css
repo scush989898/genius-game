@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+}
+
+main {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  width: 60vw;
+  height: 90vh;
+}
+
+h1 {
+  color: #fff;
+  font-size: 68px;
+  width: 100%;
+  height: 10%;
+}
+#container {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.caixa {
+  width: 48%;
+  height: 48%;
+  cursor: pointer;
+}
+
+.caixa-mensagem {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  margin: 150px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+button {
+  width: 200px;
+  height: 60px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  --white: #fff;
+  font-size: 23px;
+  font-weight: bolder;
+  padding: 1px;
+  letter-spacing: 0.06em;
+  position: relative;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--white);
+  background: linear-gradient(
+    to right,
+    rgba(27, 253, 156, 0.1) 1%,
+    transparent 40%,
+    transparent 60%,
+    rgba(27, 253, 156, 0.1) 100%
+  );
+  color: var(--white);
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4),
+    0 0 9px 3px rgba(27, 253, 156, 0.1);
+}
+
+#botao-reiniciar {
+  width: 270px;
+  height: 80px;
+}
+
+p {
+  font-size: 21px;
+  font-weight: bolder;
+  padding: 10px;
+  color: red;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: bolder;
+  padding: 10px;
+  color: red;
+}
+
+.modal {
+  background-color: rgba(153, 250, 213, 0);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 350px;
+  height: 280px;
+  box-shadow: 5px 5px 35px 10px #fff;
+  color: #fff;
+  font-size: 34px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 50%;
+  left: 20px;
+  padding: 15px;
+  border-radius: 20%;
+}
+.verde {
+  background-color: green;
+  border-top-left-radius: 100%;
+}
+
+.amarela {
+  background-color: yellow;
+  border-bottom-left-radius: 100%;
+}
+
+.vermelha {
+  background-color: red;
+  border-top-right-radius: 100%;
+}
+
+.azul {
+  background-color: blue;
+  border-bottom-right-radius: 100%;
+}
+
+#verde {
+  -webkit-box-shadow: 5px 5px 35px 10px green;
+  box-shadow: 5px 5px 35px 10px green;
+  transition: 0.4ms;
+}
+
+#amarela {
+  -webkit-box-shadow: 5px 5px 35px 10px yellow;
+  box-shadow: 5px 5px 35px 10px yellow;
+  transition: 0.4ms;
+}
+
+#vermelha {
+  -webkit-box-shadow: 5px 5px 35px 10px red;
+  box-shadow: 5px 5px 35px 10px red;
+  transition: 0.4ms;
+}
+
+#azul {
+  -webkit-box-shadow: 5px 5px 35px 10px blue;
+  box-shadow: 5px 5px 35px 10px blue;
+  transition: 0.4ms;
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  left: -4em;
+  width: 4em;
+  height: 100%;
+  top: 0;
+  transition: transform 0.4s ease-in-out;
+  background: linear-gradient(
+    to right,
+    transparent 1%,
+    rgba(27, 253, 156, 0.1) 40%,
+    rgba(27, 253, 156, 0.1) 60%,
+    transparent 100%
+  );
+}
+
+button:hover:before {
+  transform: translateX(15em);
+}
+
+button:hover {
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6),
+    0 0 9px 3px rgba(27, 253, 156, 0.2);
+}
+
+._errado {
+  box-shadow: 5px 5px 35px 10px #fd1b41;
+  color: #fd1b41;
+  border: 2px solid #fd1b41;
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
