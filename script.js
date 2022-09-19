@@ -87,8 +87,8 @@ function terminaJogo(pontuacao, record) {
   }
   mensagem.innerHTML = `
       <h3>ERROU :(</h3>
-      <p>SUA PONTUAÇÃO FOI DE:  ${pontuacao}</p>
-      <p>O RECORD ATUAL É DE:  ${record}</p>
+        <p>SUA PONTUAÇÃO FOI DE:  ${pontuacao}</p>
+        <p>O RECORD ATUAL É DE:  ${record}</p>
       <button id = 'botao-reiniciar'>JOGAR NOVAMENTE</button>
   `;
   botaoReiniciarJogo = document.getElementById("botao-reiniciar");
